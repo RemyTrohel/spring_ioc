@@ -2,15 +2,19 @@ package fr.wildcodeschool.thewizardproject.models;
 
 public class Dumbledore implements WizardInterface {
 
+    private Outfit outfit;
+
+    public Dumbledore(Outfit outfit) {
+        this.outfit = outfit;
+    }
+
     @Override
     public String giveAdvice() {
         return "One can never have enough socks.";
     }
 
     @Override
-    public Outfit changeDress() {
-        return null;
+    public String changeDress() {
+        return this.outfit.color();
     }
-
-    
 }
